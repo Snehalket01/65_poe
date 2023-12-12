@@ -1,0 +1,39 @@
+eclips New Project--> Other--> Maven Project 
+filter--> maven-archetype-webapp
+Group Id: com.websystiquw.mave
+ArtifactId: MavenWebProject
+Yes--> Y
+
+push on git
+
+in jenkins set all paths Jdk, Maven, Git 
+echo %JAVA_HOME%
+mvn --version
+where mvn
+
+
+C:>Program Files>Apache Software Foundation>Tomcat 9.0_Tomcat90>conf and under conf 
+click on tomcat-users.xml add this lines( Uername and password)
+
+
+go to Dashboard>new item write the project name and choose free style project
+
+Git
+
+under build Triggers go to poll SCM and write five * with single space
+
+Add a build step select Maven and in goal write clean install
+
+In post build select deploy war/ear to a container
+Write this **/*.war and in context path you can write any name but keep in mind for 
+MavenDeploy (run  in loclahost)
+
+Select add container and select the tomcat version which you have installed (in this case it is 9.0 version)
+
+Now write the username(admin) and password(admin) which you have written in the tomact-user.xml
+click on add
+
+Now you will able to see that under cerdentials click on it and write the tomcat url as it is (as suggested 
+while downloading you have to change the port to 8081)
+
+Now to deploy just write “http://localhost:8081/MavenDeploy/ “ in browse

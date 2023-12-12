@@ -1,0 +1,4 @@
+create new folder--> GitServer
+git bash command
+git init snehal.git --bare
+git clone Gitserve_floder_path

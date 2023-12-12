@@ -1,0 +1,31 @@
+1 folder-> java program
+	public class hello{
+public static void main(String[] arg){
+System.out.println("hello");
+}
+}
+
+2 Dockerfile 
+	FROM openjdk
+COPY . /app
+WORKDIR /app
+RUN javac hello.java
+CMD ["java", "hello"]
+
+3 Create docker images → search and pull iamges
+
+4 Build Docker Images:
+Commands on terminal—>
+1) docker build -t java-app .
+2) docker images
+3) docker tag java-app snehal01102002/assi10:bullseye (docker tag
+//appname// username/reponame:tagname
+4) docker login
+5) docker images
+6) docker push snehal01102002/assi10:bullseye
+Pull And Run Images
+Commands on command prompt→
+7) docker login
+8) docker pull snehal01102002/assi10:bullseye
+9) docker run --name javacontainer java-app
+10) docker ps -a

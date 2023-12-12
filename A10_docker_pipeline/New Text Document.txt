@@ -1,0 +1,75 @@
+1 git folder Jenkinsfile, Dockerfile, Java
+	
+	pipeline {
+  environment {
+  registry = "anjalideshpande/demo"
+  registryCredential = 'dockerhub_id'
+  dockerImage = ''
+}
+agent any
+stages {
+        stage('Build image') 
+        {
+          steps{
+            script {
+                    dockerImage = docker.build registry + ":$BUILD_NUMBER"
+                    }
+                }
+         }
+         stage('Deploy the image') 
+         {
+            steps{
+              script {
+                  docker.withRegistry( '', registryCredential ) 
+                      {
+                        dockerImage.push()
+                      }
+                  }
+                }
+          }
+//           stage('Cleaning up') {
+//               steps{
+//                   bat "docker rmi $registry:$BUILD_NUMBER"
+//               }
+//           }
+  }
+}
+
+
+Dockerfile
+
+
+	# base image
+FROM  openjdk:8
+COPY . /src/java
+WORKDIR /src/java
+RUN ["javac", "HelloWorld.java"]
+ENTRYPOINT ["jaava", "HelloWorld"]
+
+java
+
+public class HelloWorld{
+    public static void main(String args[]) {
+        System.out.println("Hello world");
+    }
+}
+
+
+
+2  Plugins
+Docker pipelie
+Docker Plugin
+docker build-step
+CloudBees Docker Build Publish Plugin
+
+3 dockerhub --> security--> token
+4  jenkins new project
+5 tools-> credinatial--> add
+6 config--> poll SCM --> * * * * *
+7 pipeline--> git--> gitub link--> credintial--> (Jenkinsfile same)
+8 build
+
+cmd 
+docker imags
+
+

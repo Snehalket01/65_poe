@@ -1,0 +1,7 @@
+New project
+freestyle
+git push
+Build Steps--> Execute windows batch command 
+py filename.py
+  or 
+python filename.py

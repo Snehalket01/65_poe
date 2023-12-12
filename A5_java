@@ -1,0 +1,9 @@
+jenkins new project --> Freestyle project 
+create simple java program and run in cmd by command javac filename.java
+push on git
+in jenkins configure --> Github Project --> Git URL
+In the "Add build step" selected the "Execute Windows batch command" and entered the
+following command to compile the java code.
+      javac filename.java
+      java filename
+save and build 

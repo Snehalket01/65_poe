@@ -1,0 +1,28 @@
+Plugin --> Buid--> Deploy war/ear to container--> **/*.war
+
+“Build pipeline" continuous deployment and delivery
+
+1 Freestyle project
+2 github dimple java application
+3 Execute Windows batch command option from the add build step
+4 Javac hello.java
+	java hello
+5 Trigger only if build is satable
+6 Build
+
+"Delivery Pipeline" plugin
+New View
+Delivery pipline view--> create
+Delivery pipline/ show static analysis results & Show total build time
+
+pipeline 
+componenet--> My job
+initla job--> hello --save 
+
+
+“Build pipeline" plugin Installed
+New View --> Build pipeline view--> create
+pipline fola--> based on upstream/down real
+hello
+save 
+build pipeline view

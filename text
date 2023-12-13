@@ -1,0 +1,22 @@
+git merge--> combining changes from one branch to another
+git rebase--> moving changes form one b to another
+Saquash--> using git squasing command can combine muiplite commaits into single commit
+
+CI CD--> continuous integration and continuous deployment
+        detect integration issue       deploy successfully 
+
+What is Devops--> DevOps is Developement and operations
+          the structure of devops contains plan , code, Building, test, relesing, deploying operating, monitoring application in softeware development
+
+Maven--> Maven is power full tool for project management 
+        mostly used for java project to build web applications
+        POM Project object model
+
+Jenkins--> jenkins is a powerful application that allows continous integration and continuous deployment of project 
+
+What is continous integration--> is a development practice that requires developers to integrate code into shared reopsitory at regular intervals.
+
+
+Docker--> Docker is a platform that enables developers to automate the deployment applications insided contatiner 
+docker images - templates that contain the application code, liberies, and other settings
+dockerfile- configuration file defines steps to build a dockerr images 

@@ -4,17 +4,17 @@ Group Id: com.websystiquw.mave
 ArtifactId: MavenWebProject
 Yes--> Y
 
-push on git
+push on git (https://github.com/Snehalket01/MavenPractice_HS_C.git)
 
 in jenkins set all paths Jdk, Maven, Git 
 echo %JAVA_HOME%
 mvn --version
 where mvn
-
+echo %JRE_HOME% (tomcat)
 
 C:>Program Files>Apache Software Foundation>Tomcat 9.0_Tomcat90>conf and under conf 
 click on tomcat-users.xml add this lines( Uername and password)
-
+<user username="deployer" password="pass123" roles="manager-script"/>
 
 go to Dashboard>new item write the project name and choose free style project
 
@@ -32,6 +32,11 @@ Select add container and select the tomcat version which you have installed (in 
 
 Now write the username(admin) and password(admin) which you have written in the tomact-user.xml
 click on add
+
+tomcat sever.xml --> connect port 9090
+statrtup (cmd)
+
+localhost:9090
 
 Now you will able to see that under cerdentials click on it and write the tomcat url as it is (as suggested 
 while downloading you have to change the port to 8081)
